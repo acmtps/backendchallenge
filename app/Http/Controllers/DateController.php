@@ -97,7 +97,7 @@ class DateController extends Controller
     public function compareTimeZone(DateRequest $request)
     {
         try{
-            $diffNumber = $this->dateHelper->timeZoneComparasion($request->date1, $request->date2, $request->format);
+            $diffNumber = $this->dateHelper->timeZoneComparison($request->date1, $request->date2, $request->format);
         }catch(Exception $e){
             return response(['error' => $e->getMessage(), ], 200);
         }

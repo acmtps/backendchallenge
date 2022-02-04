@@ -1,67 +1,118 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # backendchallenge
+
+The project is done in Laravel ^8.75 Framework and supports PHP 7.3 and PHP 8.
+
+##Requirements for the project
+1. PHP ^7.3
+2. LAMP or WAMP server
+3. Composer for downloading the dependency files
+4. POSTMAN or any API platform to test the project
+
+###Installation
+1. Go to your Project Folder
+2. Git clone https://github.com/acmtps/backendchallenge.git or you can download the file
+3. composer install or composer update
+4. Setup configuration in .env files (for this project you can just clone the .env.example file)
+
+##How to run and test the project
+1. Open a terminal in your project folder and run "PHP artisan serve". This way your project will start at http://127.0.0.1:8000 (you can use http://localhost:8000)
+2. Open POSTMAN or any API platform tools to run the APIs.
+
+### For every API routes there are parameters date1, date2 and format(seconds, minutes, hours, years)
+### In Header include on the API platform:
+	Content-Type: multipart/form-data
+	Accept: application/json
+### Recommended date format Y-m-d
+
+
+2.1. Find out the number of days between two datetime parameters.
+		http://localhost:8000/api/getdaydiff
+		KEY         VALUE
+		date1       input your value
+		date2       input your value
+		format      input your value or can be null
+	For example:
+		date1 = 2018-11-12
+		date2 = 2022-02-22
+
+		Result:
+		{
+		    "success": true,
+		    "numberofday": 1198,
+		    "format": null
+		}
+
+2.2. Find out the number of weekdays between two datetime parameters.
+		http://localhost:8000/api/getweekdays
+		KEY         VALUE
+		date1       input your value
+		date2       input your value
+		format      input your value or can be null
+	For example:
+		date1 = 2022-01-01
+		date2 = 2022-01-31
+
+		Result:
+		{
+		    "success": true,
+		    "weekdays": 20,
+		    "format": null
+		}
+
+2.3. Find out the number of complete weeks between two datetime parameters.
+		http://localhost:8000/api/getweeknumber
+		KEY         VALUE
+		date1       input your value
+		date2       input your value
+		format      input your value or can be null
+	For example:
+		date1 = 2022-01-01
+		date2 = 2022-01-31
+
+		Result:
+		{
+		    "success": true,
+		    "numberofweeks": 4,
+		    "format": null
+		}
+
+2.4. Accept a third parameter to convert the result of (1, 2 or 3) into one of
+	 seconds, minutes, hours, years.
+	 	http://localhost:8000/api/getconverteddate
+	 	KEY         VALUE
+		date1       input your value
+		date2       input your value
+		format      input your value(seconds, minutes, hours or years)
+	For example:
+		date1 = 2022-01-01
+		date2  = 2022-01-31
+		format  = Hours
+
+
+		{
+		    "success": true,
+		    "formated_date": 720,
+		    "format": "Hours"
+		}
+
+
+2.5. Allow the specification of a timezone for comparison of input parameters from
+	 different timezones.
+	 	http://localhost:8000/api/getconverteddate
+	 	KEY         VALUE
+		date1       input your value along with 
+		date2       input your value
+		format      input your value
+	For example:
+	date1 = 2022-01-01T08:15:30-05:00
+	date2 = 2022-01-31T24:20+05:45
+	format = hours
+
+	Result:
+	{
+	    "success": true,
+	    "formated_date": 725,
+	    "format": "hours"
+	}
+
+

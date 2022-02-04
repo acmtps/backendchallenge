@@ -40,8 +40,8 @@ class DateHelper
     //function to convert date as per user input
     public function convertDate($day1, $day2, $format= null) : int
     {
-        is_null($format) ?
-            $diffInDays = $this->makeDate($day1)->diffInDays($this->makeDate($day2)) :
+        
+        $diffInDays = is_null($format) ? $this->makeDate($day1)->diffInDays($this->makeDate($day2)) :
             $this->makeDate($day1)->{'diffIn'.$format}($this->makeDate($day2)) ;
         return $diffInDays ;
     }
@@ -67,7 +67,7 @@ class DateHelper
     }
 
     //function for time zone comparison between two dates
-    public function timeZoneComparasion($day1, $day2, $format= null) : int
+    public function timeZoneComparison($day1, $day2, $format= null) : int
     {
         $diffInDays = $this->makeDate($day1)->{'diffIn'.$format}($this->makeDate($day2)) ;
         is_null($format) ?
