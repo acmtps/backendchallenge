@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+//API ROUTES 
+//ALL ROUTES ARE POST METHOD
 Route::post('getdaydiff',[DateController::class, 'getDayDiffNumber']);
 Route::post('getweeknumber',[DateController::class, 'getWeekDiffNumber']);
 Route::post('getconverteddate',[DateController::class, 'conventIntoFormat']);
