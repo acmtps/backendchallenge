@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Request as FacadesRequest;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
+//Date Controller class
 class DateController extends Controller
 {
 
@@ -32,9 +33,9 @@ class DateController extends Controller
             $diffNumber = $this->dateHelper->getDaysDiff($request->date1, $request->date2, $request->format);
         }catch(Exception $e){
 
-            return response(['error' => $e->getMessage(), ], 200);
+            return response(['error' => $e->getMessage()], 200);
         }
-        return response(['numberofday' => $diffNumber, 'format' => $request->format],200);
+        return response(['success' => true,'numberofday' => $diffNumber, 'format' => $request->format],200);
 
     }
 
@@ -51,7 +52,7 @@ class DateController extends Controller
 
             return response(['error' => $e->getMessage(), ], 200);
         }
-        return response(['numberofweeks' => $diffNumber, 'format' => $request->format],200);
+        return response(['success' => true ,'numberofweeks' => $diffNumber, 'format' => $request->format],200);
 
     }
 
@@ -68,7 +69,7 @@ class DateController extends Controller
 
             return response(['error' => $e->getMessage(), ], 200);
         }
-        return response(['weekdays' => $weekDays, 'format' => $request->format],200);
+        return response(['success' => true, 'weekdays' => $weekDays, 'format' => $request->format],200);
 
     }
 
@@ -84,7 +85,7 @@ class DateController extends Controller
         }catch(Exception $e){
             return response(['error' => $e->getMessage(), ], 200);
         }
-        return response(['formated_date' => $diffNumber, 'format' => $request->format],200);
+        return response(['success' => true, 'formated_date' => $diffNumber, 'format' => $request->format],200);
 
     }
 
@@ -100,7 +101,7 @@ class DateController extends Controller
         }catch(Exception $e){
             return response(['error' => $e->getMessage(), ], 200);
         }
-        return response(['formated_date' => $diffNumber, 'format' => $request->format],200);
+        return response(['success' => true, 'formated_date' => $diffNumber, 'format' => $request->format],200);
 
     }
 
