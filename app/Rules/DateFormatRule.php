@@ -41,6 +41,6 @@ class DateFormatRule implements Rule
      */
     public function message()
     {
-        return 'Format is not correct.';
+        return 'Format you are trying to use is incorrect';
     }
 }
