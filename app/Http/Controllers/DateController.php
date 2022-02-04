@@ -24,7 +24,7 @@ class DateController extends Controller
     }
 
     /**
-     * @param Api\Request $request optional //optional request parameter  may coming
+     * @param Api\Request $request optional //optional request parameter  may come
      * @return  responseJson int|string
      */
     public function getDayDiffNumber(DateRequest $request)
@@ -40,7 +40,7 @@ class DateController extends Controller
     }
 
     /**
-     * @param Api\Request $request optional //optional request parameter  may coming
+     * @param Api\Request $request optional //optional request parameter  may come
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
@@ -57,7 +57,7 @@ class DateController extends Controller
     }
 
     /**
-     * @param Api\Request $request optional //optional request parameter  may coming
+     * @param Api\Request $request optional //optional request parameter  may come
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
@@ -74,7 +74,7 @@ class DateController extends Controller
     }
 
     /**
-     * @param Api\Request $request optional //optional request parameter  may coming
+     * @param Api\Request $request optional //optional request parameter  may come
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
@@ -90,7 +90,7 @@ class DateController extends Controller
     }
 
      /**
-     * @param Api\Request $request optional //optional request parameter  may coming
+     * @param Api\Request $request optional //optional request parameter  may come
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
