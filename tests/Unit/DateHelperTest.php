@@ -41,4 +41,14 @@ class DateHelperTest extends TestCase
             ]);
         $response->assertStatus(200);
     }
+
+    public function test_time_zone_comparison()
+    {
+        $response = $this->postJson('/api/getconverteddate', [
+            'timezone1' => 'Asia/Kathmandu',
+            'timezone2' => '2020-11-01',
+            'format' => 'seconds'
+        ]);
+        $response->assertStatus(200);
+    }
 }
