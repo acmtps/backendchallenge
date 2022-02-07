@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('getdaydiff',[DateController::class, 'getDayDiffNumber']);
 Route::post('getweeknumber',[DateController::class, 'getWeekDiffNumber']);
 Route::post('getconverteddate',[DateController::class, 'conventIntoFormat']);
-Route::post('getconverteddate',[DateController::class, 'compareTimeZone']);
+Route::post('getconvertedtimezone',[DateController::class, 'compareTimeZone']);
 Route::post('getweekdays',[DateController::class, 'getWeeksDays']);
 
 
