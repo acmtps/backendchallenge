@@ -46,7 +46,8 @@ class DateHelperTest extends TestCase
     {
         $response = $this->postJson('/api/getconverteddate', [
             'timezone1' => 'Asia/Kathmandu',
-            'timezone2' => '2020-11-01',
+            'timezone2' => 'Australia/Sydney',
+            'time' => '2020-11-01',
             'format' => 'seconds'
         ]);
         $response->assertStatus(200);
