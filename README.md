@@ -74,3 +74,14 @@ The project is done in Laravel ^8.75 Framework and supports PHP 7.3 and PHP 8.
 
 ***
 
+## A postman collection for the APIs is included in the project 
+>Backendchallenge.postman_collection.json file
+
+***
+
+## NOTE
+Some commands to run incase the project doesnot run properly
+1. php artisan config:clear
+2. php artisan cache:clear
+3. php artisan route:clear
+4. composer dump-autoload

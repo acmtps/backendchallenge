@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "8b554b44-94a5-4e1e-9805-b75749e5a6a6",
+		"name": "Backendchallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getdaydiff",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data;boundary=<calculated when request is sent>",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date1",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "date2",
+							"value": "2022-01-31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/getdaydiff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getdaydiff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getweekdays",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date1",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "date2",
+							"value": "2022-01-31",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "minutes",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/getweekdays",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getweekdays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getweeks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date1",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "date2",
+							"value": "2022-01-31",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/getweeknumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getweeknumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getconverteddate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date1",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "date2",
+							"value": "2022-01-31",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "hours",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/getconverteddate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getconverteddate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getconvertedtimezone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "timezone1",
+							"value": "Asia/Kathmandu",
+							"type": "text"
+						},
+						{
+							"key": "timezone2",
+							"value": "Australia/Sydney",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "minutes",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/getconvertedtimezone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getconvertedtimezone"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
