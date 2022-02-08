@@ -67,7 +67,7 @@ class DateHelper
     }
 
     //function for time zone comparison between two dates
-    public function timeZoneComparison($timeZone1, $timeZone2, $format= null) : int
+    public function timeZoneComparison($timeZone1, $timeZone2, $time, $format= null) : int
     {
         $diffInDays = is_null($format) ?
             $this->carbon->create($time, $timeZone1)->diffInHour($this->carbon->create($time,$timeZone2)) :
