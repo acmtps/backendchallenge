@@ -36,7 +36,7 @@ The project is done in Laravel ^8.75 Framework and supports PHP 7.3 and PHP 8.
 		
     http://localhost:8000/api/getdaydiff
 
-![Get Days Difference](public/images/getdaydiff.png)
+![Get Days Difference](public/images/getdaydiff.PNG)
 
 ***
 
