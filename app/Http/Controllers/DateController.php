@@ -95,10 +95,10 @@ class DateController extends Controller
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
-    public function compareTimeZone(DateRequest $request)
+    public function compareTimeZone(TimezoneRequest $request)
     {
         try{
-            $diffNumber = $this->dateHelper->timeZoneComparison($request->timezone1, $request->timezone2, $request->format);
+            $diffNumber = $this->dateHelper->timeZoneComparison($request->timezone1, $request->timezone2, $request->time, $request->format);
         }catch(Exception $e){
             return response(['error' => $e->getMessage(), ], 200);
         }
