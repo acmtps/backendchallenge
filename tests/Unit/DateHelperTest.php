@@ -44,7 +44,7 @@ class DateHelperTest extends TestCase
 
     public function test_time_zone_comparison()
     {
-        $response = $this->postJson('/api/getconverteddate', [
+        $response = $this->postJson('/api/getconvertedtimezone', [
             'timezone1' => 'Asia/Kathmandu',
             'timezone2' => 'Australia/Sydney',
             'time' => '2020-11-01',
