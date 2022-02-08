@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\DateHelper;
 use App\Http\Requests\DateRequest;
-use App\Http\Requests\TimezoneRequest;
+use App\Http\Requests\TimeZoneRequest;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
@@ -95,7 +95,7 @@ class DateController extends Controller
      * @param Request $request data types date format and strings
      * @return  responseJson int|string
      */
-    public function compareTimeZone(TimezoneRequest $request)
+    public function compareTimeZone(TimeZoneRequest $request)
     {
         try{
             $diffNumber = $this->dateHelper->timeZoneComparison($request->timezone1, $request->timezone2, $request->time, $request->format);
